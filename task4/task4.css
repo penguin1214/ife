@@ -1,0 +1,28 @@
+.body{
+	width: 100%;
+}
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 400px;
+	background: #ccc;
+	margin-left: -200px;
+	margin-top: -100px;
+}
+.corner-left,.corner-right{
+	width: 50px;
+	height: 50px;
+	background: #fc0;
+}
+.corner-left{
+	position: absolute;
+	border-radius: 0 0 50px 0 ;
+}
+.corner-right{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-radius: 50px 0 0 0 ;
+}

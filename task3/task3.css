@@ -1,0 +1,38 @@
+/*三栏式布局
+左右两栏采用float，中间栏不是用float。
+三栏均采用float，左右两栏需设置负margin。
+*/
+body{
+	width: 100%
+	padding: 20px;
+	background: #eee;
+}
+#left{
+	float: left;
+	width: 200px;
+}
+#right{
+	float: right;
+	width: 120px;
+}
+#middle{
+	margin-right: 140px;
+	margin-left: 220px;
+}
+.column{
+	background: white;
+	border: 1px solid #999;
+}
+#team-logo{
+	width: 80px;
+	height: 80px;
+	background: #eee;
+}
+.avatar{
+	width: 80px;
+	height: 80px;
+}
+#wrapper{
+	/*float: left;*/
+	position: absolute;
+}

@@ -1,0 +1,83 @@
+body{
+	background: #dedede;
+	margin: 0px;
+}
+div.image img{
+	width: 20%;
+}
+
+.article-image{
+	width: 50%;
+}
+
+#baidu-icon{
+	height: 100%;
+}
+
+.navbar{
+	background: black;
+	height: 50px;
+}
+
+.navbar ul{
+	height: 100%;
+	float: right;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul li{
+	height: 100%;
+	float: left;
+	font-size: 20px;
+}
+
+.image img{
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #ccc;
+}
+
+
+.page{
+	margin: 30px 10px;
+	padding: 10px;
+	border: 1px solid #888;
+	box-shadow: 1px 1px 2px #888;
+	background: white;
+}
+
+#content-table{
+	border: 1px;
+}
+
+.form-head{
+	padding-left: 20px;
+	border-left: 4px solid #888;
+}
+.form{
+	padding-left: 30%;
+}
+
+.form div{
+	margin: 10px;
+}
+
+input{
+	margin-left: 15px;
+}
+
+#submit-btn{
+	width: 100%;
+	background: #128fdc;
+	height: 40px;
+	border-radius: 3px;
+	border-style: none;
+	font-size: 18px;
+	color: white;
+}
+
+#submit-btn:hover{
+	background: #0063dc;
+}
