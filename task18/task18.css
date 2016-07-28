@@ -1,0 +1,24 @@
+.input{
+    margin-bottom: 10px;
+}
+.block{
+    margin:10px;
+    margin-left:0px;
+    width: 30px;
+    height:30px;
+    color: steelblue;
+    background: mediumspringgreen;
+    /*display: inline-block;*/
+    float: left;
+    text-align: center;
+}
+
+.text{
+    margin-top: 5px;
+}
+.test{
+    height: 50px;
+    width: 50px;
+    background: #000;
+    padding-top: 30px;
+}

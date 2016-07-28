@@ -1,0 +1,35 @@
+<!--用户输入城市名称和空气质量指数后，点击“确认添加”按钮后，就会将用户的输入在进行验证后，添加到下面的表格中，新增一行进行显示-->
+<!--用户输入的城市名必须为中英文字符，空气质量指数必须为整数-->
+<!--用户输入的城市名字和空气质量指数需要进行前后去空格及空字符处理（trim）-->
+<!--用户输入不合规格时，需要给出提示（允许用alert，也可以自行定义提示方式）-->
+<!--用户可以点击表格列中的“删除”按钮，删掉那一行的数据-->
+
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+</head>
+<body>
+
+<div>
+    <label>城市名称：<input id="aqi-city-input" type="text"></label><span id="city-error"></span><br>
+    <label>空气质量指数：<input id="aqi-value-input" type="text"></label><br>
+    <button id="add-btn">确认添加</button>
+</div>
+<table id="aqi-table">
+    <!--
+    <tr>
+    <td>城市</td><td>空气质量</td><td>操作</td>
+    </tr>
+    <tr>
+    <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+    <tr>
+    <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+    -->
+</table>
+<script src="task16.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#btn{
+    position: relative;
+}
+
+.block{
+    margin:10px;
+    margin-left:0px;
+    width: 30px;
+    height:30px;
+    color: steelblue;
+    background: mediumspringgreen;
+    /*display: inline-block;*/
+    float: left;
+    text-align: center;
+}
+
+.block>div, .highlight>div{
+    margin-top: 5px;
+}
+
+.highlight{
+    margin:10px;
+    margin-left:0px;
+    width: 30px;
+    height:30px;
+    color: yellow;
+    background: purple;
+    /*display: inline-block;*/
+    float: left;
+    text-align: center;
+}
+
+#search-box{
+    margin-top: 5px;
+}

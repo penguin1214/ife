@@ -1,0 +1,6 @@
+#block-box>div{
+    background: darksalmon;
+    width: 10px;
+    float: left;
+    margin: 3px;
+}

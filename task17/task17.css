@@ -1,0 +1,5 @@
+.aqi-chart-wrap>div{
+    width:5px;
+    background: #128fdc;
+    display: inline-block;
+}
