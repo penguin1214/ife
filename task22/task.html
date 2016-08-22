@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #root{
+            display: flex;
+            padding: 20px;
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+        .first-child{
+            display: flex;
+            padding: 20px;
+            width: 450px;
+            height: 260px;
+            border: 1px solid red;
+            justify-content: space-between;
+        }
+        .second-child{
+            display: flex;
+            padding: 20px;
+            width: 170px;
+            height: 220px;
+            border: 1px solid green;
+            justify-content: space-between;
+        }
+        .third-child{
+            display: flex;
+            padding: 20px;
+            width: 35px;
+            height: 180px;
+            border: 1px solid blue;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="query">
+    </div>
+    <div id="mode">
+        <input class="mode-btn" type="button" value="前序">
+        <input class="mode-btn" type="button" value="中序">
+        <input class="mode-btn" type="button" value="后序">
+    </div>
+    <div id="root">
+        <div class="first-child">123
+            <div class="second-child">
+                <div class="third-child">345</div>
+                <div class="third-child"></div>
+            </div>
+            <div class="second-child">
+                <div class="third-child"></div>
+                <div class="third-child"></div>
+            </div>
+        </div>
+        <div class="first-child">
+            <div class="second-child">
+                <div class="third-child"></div>
+                <div class="third-child"></div>
+            </div>
+            <div class="second-child">
+                <div class="third-child"></div>
+                <div class="third-child"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="task.js"></script>
+</body>
+</html>

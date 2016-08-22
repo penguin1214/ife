@@ -1,30 +1,24 @@
-var name = "The Window";
-var object = {
-    name : "My Object",
-    getNameFunc : function(){
-        return function(){
-            return this.name;
-        };
-    }
-};
-console.log(object.getNameFunc()());
+function Node(ele) {
+    this.ele = ele;
+    this.children = [];
+    this.cut = function () {
+        for (var i = 0; i<this.children.length; i++){
+            this.children[i] = null;
+        }
+    };
+    this.parent = null;
+}
 
-// var object = {
-//     name : "My Object",
-//     getNameFunc : function(){
-//         var that = this;
-//         // return function(){
-//         //     return that.name;
-//         // };
-//         return this;
-//     }
-// };
-// console.log(object.getNameFunc());
+var root = new Node(document.getElementById("root"));
+var node = new Node(document.getElementById("node"));
+var node2 = new Node(document.getElementById("node2"));
+node.parent = root;
+node2.parent = root;
 
-var func = function (cur) {
-    return function(){
-        return cur;
-    }
+window.onload = function () {
+    root.children.push(node);
+    root.children.push(node2);
+    root.cut();
+    // node.parent.cut();
 };
 
-func(3);

@@ -1,0 +1,40 @@
+body, div{
+    padding: 0;
+    margin: 0;
+}
+.parent{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.childs{
+    width: 150px;
+    border: 1px solid #f00;
+    /*padding: 20px;*/
+    margin: 20px;
+}
+.childs:last-of-type{
+    border: 1px solid #00f;
+    height: 200px;
+}
+.c1{
+    height: 120px;
+}
+.c2{
+    height: 100px;
+}
+.c3{
+    height: 40px;
+}
+
+@media (max-width: 640px) {
+    .childs:last-of-type{
+        order: -1;
+    }
+
+    .parent{
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}

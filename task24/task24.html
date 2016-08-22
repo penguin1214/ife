@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        #root{
+            padding: 20px;
+            display: flex;
+            width: 100%;
+            border:solid 1px #999999;
+            height: 500px;
+            justify-content:space-between;
+        }
+
+        .child{margin: 20px;
+            padding:20px;
+            display: flex;
+            width:30%;
+            height: 80%;
+            border:solid 1px #999999;
+            justify-content: space-between;
+        }
+
+        #delete, #add{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="root">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</div>
+
+<div id="delete">
+    <div>
+        <input type="button" value="delete node" id="del-btn">
+    </div>
+</div>
+<div id="add">
+    <div>
+        <input type="text" placeholder="node content" id="data">
+        <input type="button" value="add node" id="add-btn">
+    </div>
+</div>
+<script type="text/javascript" src="task.js"></script>
+</body>
+</html>

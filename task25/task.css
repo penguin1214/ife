@@ -1,0 +1,66 @@
+/* 以下是结点部分的样式 */
+.node-visible {
+    margin: 5px 18px;
+    background-color: #ffffff;
+}
+.node-hidden {
+    display: none;
+}
+.arrow{
+    display: inline-block;
+    margin-right: 6px;
+}
+.right-arrow{
+    width: 0;
+    height: 0;
+    border-left: 10px solid #6898c2;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+}
+.down-arrow{
+    width: 0;
+    height: 0;
+    border-top: 10px solid #6898c2;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    cursor: pointer;
+}
+.no-arrow{
+    border-left:10px solid transparent;
+}
+.node-title{
+    font-family: "Microsoft YaHei UI";
+    font-size: 14px;
+    color: #6898c2;
+    line-height: 1.5em;
+    display: inline;
+}
+.node-title:hover{
+    color: blue;
+    cursor: pointer;
+}
+.node-title-highlight{
+    color: red;
+    font-weight: bold;
+}
+.addIcon,.deleteIcon{
+    display: none;
+    vertical-align: top;
+}
+.addIcon:hover,.deleteIcon:hover{
+    cursor: pointer;
+}
+.node-header:hover>.addIcon,.node-header:hover>.deleteIcon{
+    display: inline;
+}
+br{
+    clear: both;
+}
+legend {
+    font-family: "黑体";
+    font-size: 20px;
+}
+.root, fieldset {
+    float: left;
+}
