@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rd{
+            display: inline-block;
+        }
+        #select-city{
+            display: inline-block;
+        }
+        #select-school{
+            display: inline-block;
+        }
+        #job{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="selector" onchange="radioChange()">
+            <label>
+                <!--一定要用name属性,否则不能单选-->
+            <input type="radio" name="rd" id="inschool" checked>在校生
+            </label>
+            <label>
+            <input type="radio" name="rd" id="outschool">非在校生
+            </label>
+    </div>
+    <div id="choice">
+        <div id="school" onchange="schoolChange()">
+            <section>
+                <span>学校</span>
+                <div>
+                    <select name="" id="select-city">
+                        <option value="beijing">北京</option>
+                        <option value="chengdu">成都</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" id="select-school">
+                        <option value="PKU">北京大学</option>
+                        <option value="THU">清华大学</option>
+                    </select>
+                </div>
+            </section>
+        </div>
+        <div id="job">
+            <label>就业单位</label>
+            <input type="text">
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var city = [["beijing", "北京"], ["chengdu", "成都"]];
+    var school = [["北京大学", "清华大学"], ["四川大学", "电子科技大学"]];
+    function radioChange() {
+        if (document.getElementById("inschool").checked){
+            document.getElementById("school").style.display = "block";
+            document.getElementById("job").style.display = "none";
+        }else {
+            document.getElementById("school").style.display = "none";
+            document.getElementById("job").style.display = "block";
+        }
+    }
+    
+    function schoolChange() {
+        var source = document.getElementById("select-city");
+        var target = document.getElementById("select-school");
+        var index = source.selectedIndex;
+//        var selected = source.options[index].value;
+        target.innerHTML = "";
+        for (var i = 0; i < school[index].length; i++){
+            var opt = document.createElement("option");
+            opt.value = school[index][i];
+            opt.innerHTML = school[index][i];
+            target.appendChild(opt);
+        }
+    }
+    
+</script>
+</html>

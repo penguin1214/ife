@@ -1,0 +1,24 @@
+.text-input{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border:1px solid #dedede;
+    border-radius: 4px;
+    height: 25px;
+    width: 200px;
+}
+
+.btn{
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 25px;
+    border:none;
+    border-radius: 4px;
+    background: steelblue;
+    color: white;
+    text-align: center;
+}
+
+.alert{
+    padding-left: 3rem;
+    /*color: red;*/
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="task29.css">
+</head>
+<body>
+    <div class="content">
+        <form action="">
+            <div id="name">
+                <div class="show">
+                    <label>
+                        <span>名称</span>
+                        <input type="text" class="text-input">
+                        <input type="button" value="验证" class="btn">
+                    </label>
+
+                </div>
+                <div class="alert">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    var input = document.getElementsByTagName("input")[0];
+    var alert = document.getElementsByClassName("alert")[0];
+    var btn = document.getElementsByClassName("btn")[0];
+
+    //reg exp
+    var trimReg = /^\s+|\s+$/g;
+    var chineseReg = /[\u4E00-\uFA29]|[\uE7C7-\uE7F3]/g;
+    var lenReg = /^.{4,16}$/;
+
+    btn.onclick = validate;
+    function validate() {
+        var inputName = input.value;
+        var testStr = inputName.replace(trimReg, "").replace(chineseReg, "--");
+
+        if (testStr.length == 0){
+            alert.innerHTML = "不能为空";
+            alert.style.color = "red";
+            input.style.border = "1px solid red";
+        }else if (!lenReg.test(testStr)){
+            alert.innerHTML = "长度为4~16个字符";
+            alert.style.color = "red";
+            input.style.border = "1px solid red";
+        }else {
+            alert.innerHTML = "格式正确";
+            alert.style.color = "green";
+            input.style.border = "1px solid green";
+        }
+    }
+</script>
+</html>

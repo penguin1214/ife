@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-family: "Microsoft YaHei", 微软雅黑;
+        }
+        #wrapper{
+            display: flex;
+            justify-content:center;
+        }
+        section{
+            margin: 10px;
+        }
+        .title{
+            display: inline-block;
+            width: 5rem;
+            font-size: 15px;
+        }
+        section input{
+            width: 200px;
+            border:1px solid #dedede;
+            border-radius: 5px;
+            height: 1.5rem;
+        }
+        .alert{
+            height: 1rem;
+            font-size: 13px;
+            padding-left: 6rem;
+        }
+        .btn{
+            background: steelblue;
+            color: white;
+            width: 3rem;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <form action="">
+        <section>
+            <span class="title">名称</span>
+            <input type="text" id="ip-name">
+            <br>
+            <span class="alert"></span>
+        </section>
+        <section>
+            <span class="title">密码</span>
+            <input type="text" id="ip-pwd">
+            <br>
+            <span class="alert"></span>
+        </section>
+        <section>
+            <span class="title">密码确认</span>
+            <input type="text" id="ip-pwd-cfm">
+            <br>
+            <span class="alert"></span>
+        </section>
+        <section>
+            <span class="title">邮箱</span>
+            <input type="text" id="ip-email">
+            <br>
+            <span class="alert"></span>
+        </section>
+        <section>
+            <span class="title">手机</span>
+            <input type="text" id="ip-phone">
+            <br>
+            <span class="alert"></span>
+        </section>
+        <section>
+            <input type="button" value="验证" class="btn">
+        </section>
+    </form>
+</div>
+</body>
+<script>
+    var hint = ["必填,长度为4-18个字符", "", "再次输入相同密码", "格式: example@github.com", ""];
+    var inputIDs = ["ip-name", "ip-pwd", "ip-pwd-cfm", "ip-email", "ip-phone"];
+    var emptyMsg = ["名称", "密码", "密码", "邮箱", "手机号"];
+    var errorMsg = ["长度为4-16个字符", "", "", "请填写有效邮箱", "请填写正确手机号"];
+    for (var i = 0; i<hint.length; i++) {
+        (function (i) { // creating a closure
+            //bind focus handler
+            document.getElementById(inputIDs[i]).addEventListener("focus", function (e) {
+                var tar = e.target.parentElement.getElementsByClassName("alert")[0];
+                tar.innerHTML = hint[i];
+                changeColor(tar, "#999999");
+            });
+
+            //bind blur handler
+            document.getElementById(inputIDs[i]).addEventListener("blur", function (e) {
+                var alert = e.target.parentElement.getElementsByClassName("alert")[0];
+                var tar = e.target;
+//                tar.innerHTML = "";
+                validate(tar, alert, i);
+            });
+        }(i));
+    }
+
+
+    function changeColor(ele, color) {
+        ele.style.color = color;
+    }
+
+    function validate(input, alert, index) {
+        var _input = input.value.trim();
+        if (_input.length == 0){
+            alert.innerHTML = emptyMsg[index] + "不能为空";
+            changeColor(alert, "red");
+        }else{
+            alert.innerHTML = "正确";
+            changeColor(alert, "green");
+        }
+
+    }
+
+</script>
+</html>

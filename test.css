@@ -1,41 +1,60 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+    font-size: 25px;
+    font-family: 'Microsoft yahei';
+}
+input{
+    border: 2px solid #a8a8a8;
+    font-size: 25px;
+    border-radius: 5px;
+    outline: none;
+}
+.msg {
+    color: #a8a8a8;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-
+.error > label > input{
+    border-color: #e60000
 }
-
-li{
-    list-style: none;
+.error > .msg {
+    color: #e60000;
 }
-
-.flex-container {
-    /* We first create a flex layout context */
-    display: flex;
-
-    /* Then we define the flow direction and if we allow the items to wrap
-    * Remember this is the same as:
-    * flex-direction: row;
-    * flex-wrap: wrap;
-    */
-    flex-flow: row wrap;
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
+.right  > label > input{
+    border-color: #55b53a;
 }
-.flex-item {
-    background: tomato;
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
+.right > .msg {
+    color: #55b53a;
+}
+#above-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 850px;
+    padding: 100px;
+    margin: auto;
+}
+#above-box > label > span {
+    position: absolute;
+    left: 0;
+    line-height: 80px;
+    font-weight: 700;
+}
+#above-box > a {
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    float: right;
+    line-height: 80px;
+    border-radius: 5px;
     text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #2f79ba;
+}
+#myName {
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    width: 670px;
 }
